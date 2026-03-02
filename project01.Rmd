@@ -24,6 +24,30 @@ knitr::opts_chunk$set(echo = FALSE)
 11) Discussion
 12) Conclusion
 
+## 1) Setup
+
+## 2) Datan Understanding
+
+## 3) Cleaning
+
+## 4) Feature Engineering
+
+## 5) Exploratory Data Analysis
+
+## 6) Train/Test Split
+
+## 7) Modeling
+
+## 8) Threshold Choice
+
+## 9) Evaluation
+
+## 10) Interpretation
+
+## 11) Discussion
+
+## 12) Conclusion
+
 
 ## R Markdown
 
