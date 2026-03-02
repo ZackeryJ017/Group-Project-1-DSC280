@@ -2,7 +2,38 @@
 title: "Project 01"
 author: "Zackery Jones"
 date: "2026-03-02"
-output: beamer_presentation
+output:
+  ioslides_presentation:
+    incremental: false
+  beamer_presentation:
+    theme: Madrid
+    colortheme: seahorse
+    fonttheme: structurebold
+    latex_engine: xelatex
+    toc: false
+    incremental: false
+fontsize: 10pt
+mainfont: Arial
+header-includes:
+- \usepackage{xcolor}
+- \definecolor{accent}{HTML}{004C99}
+- \setbeamercolor{structure}{fg=accent}
+- \setbeamertemplate{footline}[frame number]
+- \setbeamertemplate{section page}[none]
+- \AtBeginSection{}
+- \setlength{\parskip}{6pt}
+- \setlength{\parindent}{0pt}
+- \usepackage{listings}
+- \lstset{basicstyle=\ttfamily\scriptsize, breaklines=true, columns=fullflexible,
+  frame=single, backgroundcolor=\color{gray!5}}
+- \setkeys{Gin}{width=0.75\linewidth,keepaspectratio}
+- \AtBeginEnvironment{verbatim}{\scriptsize}
+- \AtBeginEnvironment{alltt}{\scriptsize}
+- \setbeamerfont{itemize/enumerate body}{size=\scriptsize}
+- \setbeamerfont{itemize/enumerate subbody}{size=\scriptsize}
+editor_options:
+  markdown:
+    wrap: 72
 ---
 
 ```{r setup, include=FALSE}
@@ -11,8 +42,6 @@ knitr::opts_chunk$set(echo = FALSE)
 ## Table of Contents
 
 1) Setup
-
-
 2) Data Understanding
 3) Cleaning
 4) Feature Engineering
@@ -26,28 +55,68 @@ knitr::opts_chunk$set(echo = FALSE)
 12) Conclusion
 
 ## 1) Setup
+Loading Dataset and Standardizing Column Names
+```{r, eval=FALSE}
+set.seed(1)
+install.packages('janitor')
+install.packages('skimr')
+library(janitor) 
+library(skimr)
+df <- read_csv('UCI_Credit_Card.csv')
+cleaned <- clean_names(df)
+skim(df)
+summary(df)
+```
 
 ## 2) Data Understanding
 
+Target is default_payment_next_month
+these mean w/e
+
 ## 3) Cleaning
+
+No missing values
+lots of categorical
+non predictive idk
 
 ## 4) Feature Engineering
 
-## 5) Exploratory Data Analysis
+xx
+```{r, message=FALSE, warning=FALSE, echo=TRUE}
+install.packages('readr')
+library(readr)
+df <- read_csv("UCI_Credit_Card.csv")
+```
+summary
+graphs
 
 ## 6) Train/Test Split
 
+rsample package
+
 ## 7) Modeling
+
+baseline
+tree based
 
 ## 8) Threshold Choice
 
 ## 9) Evaluation
 
+confusion matrices
+ROC/AUC
+
 ## 10) Interpretation
 
+What appears influential
 ## 11) Discussion
+potential concerns
+limitations
+
 
 ## 12) Conclusion
+which model we reccomend
+realistic next steps for improvement
 
 
 ## R Markdown
@@ -64,8 +133,9 @@ When you click the **Knit** button a document will be generated that includes bo
 
 ## Slide with R Output
 
-```{r cars, echo = TRUE}
-summary(cars)
+```{r, echo = TRUE}
+df <- read.csv('UCI_Credit_Card.csv')
+summary(df)
 ```
 
 ## Slide with Plot
