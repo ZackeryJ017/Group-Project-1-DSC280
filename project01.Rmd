@@ -1,0 +1,51 @@
+---
+title: "Project 01"
+author: "Zackery Jones"
+date: "2026-03-02"
+output: beamer_presentation
+---
+
+```{r setup, include=FALSE}
+install.packages('tinytex')
+knitr::opts_chunk$set(echo = FALSE)
+```
+## Table of Contents
+
+1) Setup
+2) Data Understanding
+3) Cleaning
+4) Feature Engineering
+5) Exploratory Data Analysis
+6) Train/Test Split
+7) Modeling
+8) Threshold Choice
+9) Evaluation
+10) Interpretation
+11) Discussion
+12) Conclusion
+
+
+## R Markdown
+
+This is an R Markdown presentation. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document.
+
+## Slide with Bullets
+
+- Bullet 1
+- Bullet 2
+- Bullet 3
+
+## Slide with R Output
+
+```{r cars, echo = TRUE}
+summary(cars)
+```
+
+## Slide with Plot
+
+```{r pressure}
+plot(pressure)
+```
+
